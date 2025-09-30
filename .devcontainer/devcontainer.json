@@ -1,0 +1,16 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "vncPort": 5901,
+      "installNoVNC": true
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y fuse",
+  "portsAttributes": {
+    "5901": {
+      "label": "VNC Desktop",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
